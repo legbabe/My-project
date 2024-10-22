@@ -18,7 +18,7 @@ The **Event Management API** is a Django-based application that allows users to 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/event-management-api.git
+   git clone https://github.com/legbabe/My-project
    cd event-management-api
    ```
 
