@@ -1,7 +1,3 @@
-Here's a well-formatted `README.md` file for your Event Management API project:
-
----
-
 # Event Management API
 
 ## Overview
