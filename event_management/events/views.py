@@ -6,6 +6,7 @@ from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from notifications.models import Notification
+from rest_framework.views import APIView
 
 class EventViewSet(viewsets.ModelViewSet):
     queryset = Event.objects.all()
@@ -38,6 +39,14 @@ class EventViewSet(viewsets.ModelViewSet):
                 message=f"The event '{instance.title}' has been cancelled."
             )
         instance.delete()
+
+
+class EventsView(APIView):
+    def get(self, request):
+        events = Event.objects.all()  # Query all events
+        serializer = EventSerializer(events, many=True)  # Serialize the events
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 @api_view(['POST'])
 def register_for_event(request, event_id):
