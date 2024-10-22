@@ -52,7 +52,7 @@ The **Event Management API** is a Django-based application that allows users to 
 
 ### User Authentication
 
-- **Register**: `POST /api/users/register/`
+- **Register**: `POST /users/register/`
   ```json
   {
     "email": "user@example.com",
@@ -61,7 +61,7 @@ The **Event Management API** is a Django-based application that allows users to 
   }
   ```
 
-- **Login**: `POST /api/users/login/`
+- **Login**: `POST /users/login/`
   ```json
   {
     "email": "user@example.com",
@@ -72,8 +72,8 @@ The **Event Management API** is a Django-based application that allows users to 
 
 ### Event Management
 
-- **List Events**: `GET /api/events/`
-- **Create Event**: `POST /api/events/`  
+- **List Events**: `GET /events/`
+- **Create Event**: `POST /events/`  
   _(Authenticated users only)_
   ```json
   {
@@ -87,12 +87,12 @@ The **Event Management API** is a Django-based application that allows users to 
   }
   ```
 
-- **Register for Event**: `POST /api/events/{event_id}/register/`  
+- **Register for Event**: `POST /events/{event_id}/register/`  
   _(Authenticated users only)_
 
 ### Notifications
 
-- **List Notifications**: `GET /api/notifications/`  
+- **List Notifications**: `GET /notifications/`  
   _(Authenticated users only)_
 
 ## Authentication
